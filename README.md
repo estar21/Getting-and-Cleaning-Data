@@ -10,23 +10,26 @@ This project demonstrates the collection and cleaning of data into a tidy data s
 
 
 ###Project Summary
+An R script, run_analysis.R has been created to do the following:
 
-Create one R script called run_analysis.R that does the following:
-
-1. Merges the training and the test sets to create one data set. 
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set 
-4. Appropriately labels the data set with descriptive activity names. 
-5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1. Merge the training and the test sets to create one data set. 
+2. Extract only the measurements on the mean and standard deviation for each measurement. 
+3. Use descriptive activity names to name the activities in the data set 
+4. Appropriately label the data set with descriptive activity names. 
+5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
 ###How to Use This Script
 
-This script automatically checks your working directory for source files and downloads them if they do not exist.
+This script automatically checks your working directory for source files and downloads them if they do not exist. The script then performs steps 1-5 listed above, and outputs the final tidy data set to a file.
 
-The output is a file called "tidied_averages.txt" in your source directory.
+The output is a file called "tidied_averages.txt", created in your working directory. You may run further analysis on this tidied data set as needed.
 
 
 ###Additional Information
 
-Additional information about the data, variables, data, and transformations applied on the data through run_analysis.R is available in the CodeBook.MD file.
+Additional information is available in the CodeBook.MD file for the following:
+
+1. Information about the data and how it was collected
+2. Information about variables, 
+3. Step-by-Step transformations applied on the data with run_analysis.R
