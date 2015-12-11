@@ -8,9 +8,7 @@ This project demonstrates the collection and cleaning of data into a tidy data s
 
 [The source data for this project can be found here.](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-
-###Project Summary
-An R script, run_analysis.R has been created to do the following:
+The project requires students to write an R script, run_analysis.R to do the following:
 
 1. Merge the training and the test sets to create one data set. 
 2. Extract only the measurements on the mean and standard deviation for each measurement. 
@@ -19,7 +17,7 @@ An R script, run_analysis.R has been created to do the following:
 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-###How to Use This Script
+###How to Use [run_analysis.R](https://github.com/estar21/Getting-and-Cleaning-Data/blob/master/run_analysis.R) in this Repo
 
 This script automatically checks your working directory for source files and downloads them if they do not exist. The script then performs steps 1-5 listed above, and outputs the final tidy data set to a file.
 
