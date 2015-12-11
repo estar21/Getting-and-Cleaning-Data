@@ -1,16 +1,11 @@
-﻿##Getting and Cleaning Data Project
+﻿#Getting and Cleaning Data Project
+
+##Description
+
+This code book summarizes the resulting data fields in tidy.txt. 
 
 
-###Description
-
-This contains information about the data set, its variables, and a description of transformations used for cleaning the data. This is part of a course project submission for the Johns Hopkins Getting and Cleaning Data course.
-
-
-###Source Data
-
-[The source data for this project can be found here.](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
-
-###Data Set Information
+##What the Raw Data Comprises
 
 A full description of the data used in this project can be found at [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
@@ -20,28 +15,71 @@ Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTA
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
+The readings in this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-###Attribute Information
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-For each record in the dataset it is provided:
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
-* Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
-* Triaxial Angular velocity from the gyroscope.
-* A 561-feature vector with time and frequency domain variables.
-* Its activity label.
-* An identifier of the subject who carried out the experiment.
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+**Signals**
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
+
+Two kinds of **variables** that were estimated from these signals are: 
+* mean(): Mean value
+* std(): Standard deviation
+
+There are other variables, but they are not relevant for this project.
+
+For every **signal** in the list above, each type of **variable** estimate is computed. 
+
+For example:
+* The variable _fBodyAcc-mean()-X_ contains the mean value of the the _tBodyAcc-X_ signal. 
+* Similarly, _fBodyAcc-std()-Y_ contains the standard deviation of the fBodyAcc-Y signal.
+
+Multiple readings were taken for each activity, for each subject. Consequently, there are also multiple readings of every signal and its variable estimates in the data set.
 
 
-###Transformations performed to clean up the data using run_analysis.R:
+##What the Tidied Data Comprises
+This data set contains the average of each mean and standard deviation variable for each activity and each subject
 
-1. Check working directory for source data. Download and unzip if it does not exist
-2. Read in "activity_labels.txt" and "features.txt"
-3. Extract only the names of measurements that contain the mean and standard deviation. (DO NOT take col names "gravityMean, tBodyAccMean, tBodyAccJerkMean, tBodyGyroMean, tBodyGyroJerkMean". These were applied on the angle() estimate, and should not be included)
-4. Make names from step 3 descriptive and store in a seperate vector. Use this to rename variables in the combined data set later. (Nomenclature for naming convention: feature_mean|std_X|Y|Z)
-5. Read in train data files "subject_train.txt", "X_train.txt" and "y_train.txt", (pulling only columns shortlisted in step 3) and combine them into one dataframe
-6. Read in test data files "subject_test.txt", "X_test.txt" and "y_test.txt", (pulling only columns shortlisted in step 3) and combine them into one dataframe
-7. Combine dataframes from 5 and 6 into a new data frame
-8. Appropriately label the new data frame from step 7 with descriptive variable names from step 4.
-9. Create a second, independent tidy data set with the average of each variable for each activity and each subject. (Use group_by and summarise from dplyr)
-10. Rename columns of data frame from step 9 to indicate they are averages of the original columns.
-11. Output the file containing averages for each variable for each activity and each subject as "tidied_averages.txt"
+
+### Identifiers
+* Subject - The unique ID of the test subject
+* Activity - The type of activity performed when the corresponding measurements were taken
+ * - Activity Types
+ * WALKING: subject was walking during the test
+ * WALKING_UPSTAIRS: subject was walking up a staircase during the test
+ * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
+ * SITTING: subject was sitting during the test
+ * STANDING: subject was standing during the test
+ * LAYING: subject was laying down during the test
+
+### Measurements
+Variable/Column labels were renamed to give clarity to output.
+
+With reference to signals from the original data set (listed above), the tidied output variable labels can then be understood using the following nomenclature:
+
+Avg_ + **signal name** + _ + **estimate type (either mean or std deviation)** + _ + **X or Y or Z**
+
+For example:
+* _Avg_fBodyAccJerk_Std_X_ is the average of standard deviation estimates on  _fBodyAccJerk-X_ per subject per activity
+
