@@ -66,12 +66,12 @@ This data set contains the average of each mean and standard deviation variable 
 * Subject - The unique ID of the test subject
 * Activity - The type of activity performed when the corresponding measurements were taken
  * Activity Types
-  * WALKING: subject was walking during the test
-  * WALKING_UPSTAIRS: subject was walking up a staircase during the test
-  * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
-  * SITTING: subject was sitting during the test
-  * STANDING: subject was standing during the test
-  * LAYING: subject was laying down during the test
+   * WALKING: subject was walking during the test
+   * WALKING_UPSTAIRS: subject was walking up a staircase during the test
+   * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
+   * SITTING: subject was sitting during the test
+   * STANDING: subject was standing during the test
+   * LAYING: subject was laying down during the test
 
 ### Measurements
 To reflect that columns now contain averages, variable/column labels were renamed. With reference to signals from the original data set (listed above), the tidied output variable labels can then be understood using the following nomenclature:
@@ -80,5 +80,5 @@ To reflect that columns now contain averages, variable/column labels were rename
 
 For example:
 * _Avg_fBodyAccJerk_Std_X_ is the average  _fBodyAccJerk-std()-X_ per subject per activity
-*_Avg_tBodyAcc_Mean_X_ is the average of _fBodyAcc-mean()-X_ per subject per activity
+* _Avg_tBodyAcc_Mean_X_ is the average of _fBodyAcc-mean()-X_ per subject per activity
 
