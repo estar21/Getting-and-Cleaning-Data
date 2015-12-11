@@ -1,19 +1,17 @@
-﻿#Getting and Cleaning Data Project
+﻿##Getting and Cleaning Data Course Project
 
 Repo for the submission of the course project for the Johns Hopkins Getting and Cleaning Data course.
 
-##Overview
+###Overview
 
 This project demonstrates the collection and cleaning of data into a tidy data set that can be used for subsequent analysis. A full description of the data used in this project can be found at [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 [The source data for this project can be found here.](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 
-##Project Summary
+###Project Summary
 
-The following is a summary of the course project instructions
-
-Create one R script called run_analysis.R that does the following. 
+Create one R script called run_analysis.R that does the following:
 
 1. Merges the training and the test sets to create one data set. 
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -22,7 +20,7 @@ Create one R script called run_analysis.R that does the following.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-##How to Use This Script
+###How to Use This Script
 
 This script automatically checks your working directory for source files and downloads them if they do not exist.
 

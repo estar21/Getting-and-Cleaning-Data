@@ -1,16 +1,16 @@
-﻿#Getting and Cleaning Data Project
+﻿##Getting and Cleaning Data Project
 
 
-##Description
+###Description
 
 This contains information about the data set, its variables, and a description of transformations used for cleaning the data. This is part of a course project submission for the Johns Hopkins Getting and Cleaning Data course.
 
 
-##Source Data
+###Source Data
 
 [The source data for this project can be found here.](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-##Data Set Information
+###Data Set Information
 
 A full description of the data used in this project can be found at [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
@@ -21,7 +21,7 @@ Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTA
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
 
-##Attribute Information
+###Attribute Information
 
 For each record in the dataset it is provided:
 
@@ -32,7 +32,7 @@ For each record in the dataset it is provided:
 * An identifier of the subject who carried out the experiment.
 
 
-##Transformations performed to clean up the data using run_analysis.R:
+###Transformations performed to clean up the data using run_analysis.R:
 
 1. Check working directory for source data. Download and unzip if it does not exist
 2. Read in "activity_labels.txt" and "features.txt"
