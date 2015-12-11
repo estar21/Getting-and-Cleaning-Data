@@ -79,6 +79,6 @@ To reflect that columns now contain averages, variable/column labels were rename
 **Avg** + _ + **signal name** + _ + **estimate type (either mean or std deviation)** + _ + **X or Y or Z**
 
 For example:
-* _Avg_fBodyAccJerk_Std_X_ is the average  _fBodyAccJerk-std()-X_ per subject per activity
-* _Avg_tBodyAcc_Mean_X_ is the average of _fBodyAcc-mean()-X_ per subject per activity
+* The column named _Avg_fBodyAccJerk_Std_X_ contains the average  _fBodyAccJerk-std()-X_ per subject per activity
+* The column named _Avg_tBodyAcc_Mean_X_ contains the average of _fBodyAcc-mean()-X_ per subject per activity
 
