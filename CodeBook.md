@@ -64,14 +64,13 @@ This data set contains the average of each mean and standard deviation variable 
 
 ### Identifiers
 * Subject - The unique ID of the test subject
-* Activity - The type of activity performed when the corresponding measurements were taken
- * Activity Types
-   * WALKING: subject was walking during the test
-   * WALKING_UPSTAIRS: subject was walking up a staircase during the test
-   * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
-   * SITTING: subject was sitting during the test
-   * STANDING: subject was standing during the test
-   * LAYING: subject was laying down during the test
+* Activity - The type of activity performed when the corresponding measurements were taken. There are 6 types:
+  * WALKING: subject was walking during the test
+  * WALKING_UPSTAIRS: subject was walking up a staircase during the test
+  * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
+  * SITTING: subject was sitting during the test
+  * STANDING: subject was standing during the test
+  * LAYING: subject was laying down during the test
 
 ### Averaged Measurements
 To reflect that columns now contain averages, variable/column labels were renamed. With reference to signals from the original data set (listed in "What the Raw Data Comprises >> Signals" above), the tidied output variable labels can be understood using the following nomenclature:
