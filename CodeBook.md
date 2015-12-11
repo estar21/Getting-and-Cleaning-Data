@@ -52,10 +52,10 @@ There are other variables, but they are not relevant for this project.
 For every **signal** in the list above, each type of **variable** estimate is computed. 
 
 For example:
-* The variable _fBodyAcc-mean()-X_ contains the mean value of the the _tBodyAcc-X_ signal. 
-* Similarly, _fBodyAcc-std()-Y_ contains the standard deviation of the fBodyAcc-Y signal.
+* The variable _fBodyAcc-mean()-X_ contains the mean estimate of the the _tBodyAcc-X_ signal. 
+* Similarly, _fBodyAcc-std()-Y_ contains the standard deviation estimate of the fBodyAcc-Y signal.
 
-Multiple readings were taken for each activity, for each subject. Consequently, there are also multiple readings of every signal and its variable estimates in the data set.
+Multiple readings were taken for each activity, for each subject. Consequently, there are also multiple rows containing observations of every signal and its variable estimates in the data set.
 
 
 ##What the Tidied Data Comprises
@@ -65,21 +65,20 @@ This data set contains the average of each mean and standard deviation variable 
 ### Identifiers
 * Subject - The unique ID of the test subject
 * Activity - The type of activity performed when the corresponding measurements were taken
- * - Activity Types
- * WALKING: subject was walking during the test
- * WALKING_UPSTAIRS: subject was walking up a staircase during the test
- * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
- * SITTING: subject was sitting during the test
- * STANDING: subject was standing during the test
- * LAYING: subject was laying down during the test
+ * Activity Types
+  * WALKING: subject was walking during the test
+  * WALKING_UPSTAIRS: subject was walking up a staircase during the test
+  * WALKING_DOWNSTAIRS: subject was walking down a staircase during the test
+  * SITTING: subject was sitting during the test
+  * STANDING: subject was standing during the test
+  * LAYING: subject was laying down during the test
 
 ### Measurements
-Variable/Column labels were renamed to give clarity to output.
+To reflect that columns now contain averages, variable/column labels were renamed. With reference to signals from the original data set (listed above), the tidied output variable labels can then be understood using the following nomenclature:
 
-With reference to signals from the original data set (listed above), the tidied output variable labels can then be understood using the following nomenclature:
-
-Avg_ + **signal name** + _ + **estimate type (either mean or std deviation)** + _ + **X or Y or Z**
+**Avg** + _ + **signal name** + _ + **estimate type (either mean or std deviation)** + _ + **X or Y or Z**
 
 For example:
-* _Avg_fBodyAccJerk_Std_X_ is the average of standard deviation estimates on  _fBodyAccJerk-X_ per subject per activity
+* _Avg_fBodyAccJerk_Std_X_ is the average  _fBodyAccJerk-std()-X_ per subject per activity
+*_Avg_tBodyAcc_Mean_X_ is the average of _fBodyAcc-mean()-X_ per subject per activity
 
