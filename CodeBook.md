@@ -74,7 +74,7 @@ This data set contains the average of each mean and standard deviation variable 
    * LAYING: subject was laying down during the test
 
 ### Measurements
-To reflect that columns now contain averages, variable/column labels were renamed. With reference to signals from the original data set (listed above), the tidied output variable labels can then be understood using the following nomenclature:
+To reflect that columns now contain averages, variable/column labels were renamed. With reference to signals from the original data set (listed in "What the Raw Data Comprises >> Signals" above), the tidied output variable labels can be understood using the following nomenclature:
 
 **Avg** + _ + **signal name** + _ + **estimate type (either mean or std deviation)** + _ + **X or Y or Z**
 
