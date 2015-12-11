@@ -36,8 +36,8 @@ For each record in the dataset it is provided:
 
 1. Check working directory for source data. Download and unzip if it does not exist
 2. Read in "activity_labels.txt" and "features.txt"
-3. Extract only the names of measurements that contain the mean and standard deviation. DO NOT take col names "gravityMean, tBodyAccMean, tBodyAccJerkMean, tBodyGyroMean, tBodyGyroJerkMean". These were applied on the angle() estimate, and should not be included)
-4. Make names from step 3 descriptive and store in a seperate vector for renaming variables in the combined data set later. (Nomenclature for naming convention: <feature>_<mean|std>_<X|Y|Z>)
+3. Extract only the names of measurements that contain the mean and standard deviation. (DO NOT take col names "gravityMean, tBodyAccMean, tBodyAccJerkMean, tBodyGyroMean, tBodyGyroJerkMean". These were applied on the angle() estimate, and should not be included)
+4. Make names from step 3 descriptive and store in a seperate vector. Use this to rename variables in the combined data set later. (Nomenclature for naming convention: feature_mean|std_X|Y|Z)
 5. Read in train data files "subject_train.txt", "X_train.txt" and "y_train.txt", (pulling only columns shortlisted in step 3) and combine them into one dataframe
 6. Read in test data files "subject_test.txt", "X_test.txt" and "y_test.txt", (pulling only columns shortlisted in step 3) and combine them into one dataframe
 7. Combine dataframes from 5 and 6 into a new data frame
